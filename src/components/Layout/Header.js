@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import HeaderCartButton from './HeaderCartButton';
 import mealsimage from "../../assets/meals.jpg";
 import classes from './Header.module.css';
+import MealsSummary from "../Meals/MealsSummary";
 
 const Header = (props) => {
   return (
@@ -13,6 +14,7 @@ const Header = (props) => {
       <div className={classes['main-image']}>
         <img src={mealsimage} alt="A table full of delicious food!" />
       </div>
+      <MealsSummary />
     </Fragment>
   );
 };
