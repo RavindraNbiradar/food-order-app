@@ -9,9 +9,11 @@ const HeaderCartButton = (props) => {
     const cartCtx = useContext(CartContext);
   console.log(cartCtx, "-------header cart");
   let quantity = 0;
+  console.log(cartCtx.items,'-items')
   cartCtx.items.forEach((item) => {
     console.log(item, "----item");
-    quantity = quantity + Number(item.quantity);
+    quantity = quantity + +item.quantity 
+   console.log(quantity,'========quantity')
   });
   console.log(quantity, "----quantity");
     return <button className={classes.button} onClick={props.onClick}>
